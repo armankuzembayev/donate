@@ -1,15 +1,24 @@
-# Basic Sample Hardhat Project
+# Smart contract for donations
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
 
-Try running some of the following tasks:
+To run unit tests
 
 ```shell
-npx hardhat accounts
-npx hardhat compile
-npx hardhat clean
 npx hardhat test
-npx hardhat node
-node scripts/sample-script.js
-npx hardhat help
+```
+
+To deploy to rinkeby network
+
+```shell
+npx hardhat run scripts/deploy.js --network rinkeby
+```
+
+
+Try running some of the following tasks for rinkeby network:
+
+```shell
+npx hardhat transfer --amount <amount> --network rinkeby
+npx hardhat withdraw --to <account's address> --amount <amount> --network rinkeby
+npx hardhat donators --network rinkeby
+npx hardhat donationAmount --address <user's address> --network rinkeby
 ```
